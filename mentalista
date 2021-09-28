@@ -1,0 +1,18 @@
+var numeroSecreto = parseInt(Math.random() * 11);
+
+function Chutar() {
+  var chute = parseInt(document.getElementById("valor").value);
+
+  var elementoResultado = document.getElementById("resultado");
+
+  if (chute == numeroSecreto) {
+    elementoResultado.innerHTML = "Você acertou!!";
+  } else if (chute > 10 || chute < 0) {
+    elementoResultado.innerHTML = "Digite um numero na escala entre 0 e 10";
+  } else {
+    elementoResultado.innerHTML = "Você errou!!";
+  }
+}
+
+// A barra vertical || duas vezes é a mesma coisa que "ou"
+//Comando usado para sorteio de numeros "Math.random()"
